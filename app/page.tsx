@@ -23,6 +23,22 @@ export default function Page() {
     <>
       <section className="mb-0">
         <Header />
+      </section>
+
+      <div className="flex flex-col gap-4 mb-4 w-full max-w-2xl">
+        <Callout icon="🏖️">
+          <p className="text-[15px]">
+            {`i'll be in rio de janeiro, brazil for `}<span className="italic">ICLR 2026</span>{`! happy to chat research (multimodality, interp, alignment) or anything deep learning. feel free to reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<a href="mailto:idhant.gulati@gmail.com" className="underline underline-offset-4 decoration-1">email</a>{`.`}
+          </p>
+        </Callout>
+        <Callout icon="🔬">
+          <p className="text-[15px]">
+            {`i'll be presenting `}<a href="https://arxiv.org/abs/2602.16931" target="_blank" rel="noopener noreferrer" className="italic underline underline-offset-4 decoration-1">Narrow Fine-Tuning Erodes Safety Alignment in Vision-Language Agents</a>{` (`}<a href="https://github.com/idhantgulati/vlm-alignment/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">code</a>{`) at the `}<span className="italic">lifelong agents workshop</span>{` at ICLR 2026`}
+          </p>
+        </Callout>
+      </div>
+
+      <section className="mb-0">
         <p className="text-4xl font-biro-script mb-3 text-left">yo,</p>
       </section>
 
@@ -66,7 +82,7 @@ export default function Page() {
 
           <section className="mb-4">
             <p className="mb-4 text-left text-[15px] leading-relaxed">
-              {`i like interacting with new people. if anything from the above interests you, feel free to reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<a href="mailto:idhant.gulati@gmail.com" className="underline underline-offset-4 decoration-1">email</a>{`.`}
+              {`i like interacting with new people. if anything from the above interests you, reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<a href="mailto:idhant.gulati@gmail.com" className="underline underline-offset-4 decoration-1">email</a>{`.`}
             </p>
           </section>
 

@@ -48,6 +48,7 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable
       )}
+      suppressHydrationWarning
     >
       <head>
         <link rel="icon" href="image/ig.png" />

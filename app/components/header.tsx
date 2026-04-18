@@ -21,8 +21,11 @@ const getRandomImage = (excludeImage?: string) => {
 }
 
 export default function Header() {
-  // Select random image during initial state setup
-  const [selectedImage, setSelectedImage] = useState(getRandomImage())
+  const [selectedImage, setSelectedImage] = useState(profileImages[0])
+
+  useEffect(() => {
+    setSelectedImage(getRandomImage())
+  }, [])
 
   return (
     <div className="flex items-center mb-8">
@@ -33,6 +36,7 @@ export default function Header() {
         src={selectedImage}
         alt="idhant"
         className="w-24 h-24 md:w-32 md:h-32 rounded-lg ml-auto"
+        suppressHydrationWarning
       />
     </div>
   )
