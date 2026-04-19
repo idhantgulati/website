@@ -33,10 +33,11 @@ export default function Page() {
         </Callout>
         <Callout icon="🔬">
           <p className="text-[15px]">
-            {`i'll be presenting `}<a href="https://arxiv.org/abs/2602.16931" target="_blank" rel="noopener noreferrer" className="italic underline underline-offset-4 decoration-1">Narrow Fine-Tuning Erodes Safety Alignment in Vision-Language Agents</a>{` (`}<a href="https://github.com/idhantgulati/vlm-alignment/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">code</a>{`) at the `}<span className="italic">lifelong agents workshop</span>{` at ICLR 2026`}
+            {`i'll be presenting `}<a href="https://github.com/idhantgulati/vlm-alignment/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="italic underline underline-offset-4 decoration-1">Narrow Fine-Tuning Erodes Safety Alignment in Vision-Language Agents</a>{` at the `}<span className="italic">lifelong agents workshop</span>{` at ICLR 2026`}
           </p>
         </Callout>
       </div>
+ 
 
       <section className="mb-0">
         <p className="text-4xl font-biro-script mb-3 text-left">yo,</p>
