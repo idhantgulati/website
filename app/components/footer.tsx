@@ -1,8 +1,11 @@
 'use client';
 
+import { useState } from 'react'
 import { Clock } from './clock'
 import ThemeToggle from './theme-toggle'
 import AnimationToggle from './animation-toggle'
+
+const EMAIL = 'idhant.gulati@gmail.com'
 
 function ArrowIcon() {
   return (
@@ -22,6 +25,18 @@ function ArrowIcon() {
 }
 
 export default function Footer() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch {
+      setCopied(false)
+    }
+  }
+
   return (
     <footer className="mb-16">
       <style jsx>{`
@@ -42,11 +57,33 @@ export default function Footer() {
             className="footer-link flex items-center transition-all hover:underline underline-offset-2 decoration-[0.1em]"
             rel="noopener noreferrer"
             target="_blank"
+            href="https://x.com/idhantgulati"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">twitter (x)</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="footer-link flex items-center transition-all hover:underline underline-offset-2 decoration-[0.1em]"
+            rel="noopener noreferrer"
+            target="_blank"
             href="https://github.com/idhantgulati"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">github</p>
           </a>
+        </li>
+        <li>
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            aria-label={`copy ${EMAIL} to clipboard`}
+            className="footer-link flex items-center transition-all hover:underline underline-offset-2 decoration-[0.1em] bg-transparent p-0 border-0 text-inherit font-inherit cursor-pointer"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">{copied ? 'copied!' : 'email'}</p>
+          </button>
         </li>
         <li>
           <a
@@ -57,17 +94,6 @@ export default function Footer() {
           >
             <ArrowIcon />
             <p className="ml-2 h-7">scholar</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="footer-link flex items-center transition-all hover:underline underline-offset-2 decoration-[0.1em]"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://x.com/idhantgulati"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">twitter (x)</p>
           </a>
         </li>
         <li>
@@ -102,7 +128,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="footer-version text-sm"
         >
-          v2.01.04 (april 2026)
+          v2.01.05 (april 2026)
         </a>
         <Clock />
       </div>

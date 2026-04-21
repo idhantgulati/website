@@ -1,4 +1,5 @@
 import { Callout } from './components/callout'
+import { CopyEmail } from './components/copy-email'
 import Header from './components/header'
 
 function ArrowIcon() {
@@ -28,7 +29,7 @@ export default function Page() {
       <div className="flex flex-col gap-4 mb-4 w-full max-w-2xl">
         <Callout icon="🏖️">
           <p className="text-[15px]">
-            {`i'll be in rio de janeiro, brazil for `}<span className="italic">ICLR 2026</span>{`! happy to chat research (multimodality, interp, alignment) or anything deep learning. feel free to reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<a href="mailto:idhant.gulati@gmail.com" className="underline underline-offset-4 decoration-1">email</a>{`.`}
+            {`i'll be in rio de janeiro, brazil for `}<span className="italic">ICLR 2026</span>{`! happy to chat research (interp, alignment, multimodality) or anything deep learning. feel free to reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<CopyEmail />{`.`}
           </p>
         </Callout>
         <Callout icon="🔬">
@@ -83,7 +84,7 @@ export default function Page() {
 
           <section className="mb-4">
             <p className="mb-4 text-left text-[15px] leading-relaxed">
-              {`i like interacting with new people. if anything from the above interests you, reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<a href="mailto:idhant.gulati@gmail.com" className="underline underline-offset-4 decoration-1">email</a>{`.`}
+              {`i like interacting with new people. if anything from the above interests you, reach out via `}<a href="https://x.com/idhantgulati" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-1">twitter</a>{` or `}<CopyEmail />{`.`}
             </p>
           </section>
 
